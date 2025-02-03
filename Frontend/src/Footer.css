@@ -1,0 +1,23 @@
+/* 
+.custom-footer {
+    background-color: #56036B; 
+    color: white; 
+  } */
+
+  .custom-footer {
+    background-color: #56036B; /* Footer background color */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 30px; /* Adjust the height as needed */
+  }
+  
+  .custom-title p {
+    color: white; /* Text color */
+    font-family: var(--sds-typography-heading-font-family);
+    font-size: 16px; /* Adjust text size if needed */
+    font-weight: 600;
+    text-align: center; /* Ensure text is centered */
+    margin: 0; /* Remove default margin */
+  }
+  
