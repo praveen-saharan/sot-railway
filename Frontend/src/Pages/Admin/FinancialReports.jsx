@@ -25,7 +25,7 @@ const FinancialReports = () => {
   // Fetch financial data
   const fetchFinancialData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/revenue/calculate-and-save");
+      const response = await axios.get("https://optical-wall-450106-p9.an.r.appspot.com/api/revenue/calculate-and-save");
 
       // Sort the data by earnings in descending order (highest earnings first)
       const sortedData = response.data.sort((a, b) => b.earnings - a.earnings);
@@ -47,7 +47,7 @@ const FinancialReports = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/revenue/station/${selectedTrain}/transactions?date=${selectedDate.format('YYYY-MM-DD')}`
+        `https://optical-wall-450106-p9.an.r.appspot.com/api/revenue/station/${selectedTrain}/transactions?date=${selectedDate.format('YYYY-MM-DD')}`
       );
       setTransactions(response.data.length > 0 ? response.data : []);
     } catch (error) {

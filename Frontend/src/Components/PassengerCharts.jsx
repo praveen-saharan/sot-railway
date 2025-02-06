@@ -18,7 +18,7 @@ const InsightsDashboard = () => {
 
   const fetchFinancialData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/revenue/calculate-and-save");
+      const response = await axios.get("https://optical-wall-450106-p9.an.r.appspot.com/api/revenue/calculate-and-save");
       const sortedData = response.data.sort((a, b) => b.earnings - a.earnings);
       const total = sortedData.reduce((sum, station) => sum + station.earnings, 0);
       setTotalEarnings(total);
@@ -30,7 +30,7 @@ const InsightsDashboard = () => {
 
   const fetchTransactionData = async () => {
     try {
-      const response = await fetch("http://localhost:8080/api/transactions/all-transactions");
+      const response = await fetch("https://optical-wall-450106-p9.an.r.appspot.com/api/transactions/all-transactions");
       const data = await response.json();
       setTransactionData(data);
     } catch (error) {

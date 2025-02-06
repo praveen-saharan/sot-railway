@@ -22,7 +22,7 @@ const Login = () => {
           <span>
             Email:{" "}
             <span style={{ color: "blue", fontWeight: "semibold" }}>
-              admin@sot-rts.com
+              YourEId@accenture.com
             </span>
           </span>
           <span>
@@ -61,7 +61,7 @@ const Login = () => {
   
     try {
       const response = await fetch(
-        `http://localhost:8080/admin/login?username=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`,
+        `https://optical-wall-450106-p9.an.r.appspot.com/admin/login?username=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`,
         {
           method: "POST",
           headers: {
